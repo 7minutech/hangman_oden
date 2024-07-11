@@ -94,7 +94,10 @@ class HangmanGame
   def reset
     player.reset
     computer.reset
+    self.strikes = []
+    self.game_over = false
     self.play_again = false
+    play_game
   end
 
   def play_game
