@@ -60,9 +60,7 @@ class HangmanGame
   def play_round
     game_over?
     p computer.guess
-    display_baord
-    display_strikes
-    display_past_guesses
+    display_boards
     player_guess
     if correct_guess?
       fill_correct_guess
