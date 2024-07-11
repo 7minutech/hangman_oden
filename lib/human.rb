@@ -10,6 +10,16 @@ class Human
   def guess
     puts "Enter your guess: "
     self.guess = gets.chomp.downcase
+    guess unless validate_guess
+  end
+
+  def validate_guess
+    guess = guess[0]
+    true if letter?(guess)
+  end
+
+  def letter?(letter)
+    letter.match?(/[[:alpha:]]/)
   end
 end
 p1 = Human.new
