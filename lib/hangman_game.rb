@@ -73,12 +73,12 @@ class HangmanGame
     if strikes.length == 5
       display_boards
       self.game_over = true
-      puts "You win!"
+      puts "You lost!"
     elsif board == computer.guess
       fill_correct_guess
       display_boards
       self.game_over = true
-      puts "You lost!"
+      puts "You win!"
     end
   end
 
