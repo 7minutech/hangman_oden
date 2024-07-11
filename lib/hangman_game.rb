@@ -91,6 +91,11 @@ class HangmanGame
     self.play_again = true if input == "y"
   end
 
+  def reset
+    player.reset
+    computer.reset
+  end
+
   def play_game
     set_hidden_word
     set_baord
