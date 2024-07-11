@@ -37,6 +37,12 @@ class HangmanGame
     player.display_guesses
   end
 
+  def display_boards
+    display_baord
+    display_strikes
+    display_past_guesses
+  end
+
   def correct_guess?
     true if computer.guess.include?(player.guess)
   end
