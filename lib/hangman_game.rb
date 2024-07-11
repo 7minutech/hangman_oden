@@ -89,5 +89,3 @@ class HangmanGame
     play_round while game_over == false
   end
 end
-game1 = HangmanGame.new
-game1.play_game
