@@ -11,9 +11,6 @@ class Human
   def enter_guess
     puts "Enter your guess: "
     self.guess = gets.chomp.downcase[0]
-    enter_guess until validate_guess
-    add_guess_to_used
-    p used_guesses
   end
 
   def validate_guess
@@ -32,11 +29,18 @@ class Human
   def add_guess_to_used
     used_guesses.push(guess)
   end
+
+  def valid_guess
+    loop do
+      enter_guess
+      break if validate_guess
+    end
+    add_guess_to_used
+  end
 end
 p1 = Human.new
-p1.enter_guess
-p1.enter_guess
-p1.enter_guess
+p1.valid_guess
+p1.valid_guess
+p1.valid_guess
 
-binding.pry
 puts "fd"
