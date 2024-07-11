@@ -30,7 +30,7 @@ class HangmanGame
   end
 
   def display_strikes
-    p "stirkes: #{strikes}"
+    puts "stirkes: #{strikes}"
   end
 
   def display_past_guesses
