@@ -94,6 +94,7 @@ class HangmanGame
   def reset
     player.reset
     computer.reset
+    self.play_again = false
   end
 
   def play_game
