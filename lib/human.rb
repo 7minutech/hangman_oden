@@ -1,7 +1,7 @@
 require "pry-byebug"
 # human player
 class Human
-  attr_accessor :guess
+  attr_accessor :guess, :used_guesses
 
   def initialize
     @guess
