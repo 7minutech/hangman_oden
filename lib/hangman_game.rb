@@ -1,3 +1,4 @@
+require "pry-byebug"
 require_relative "computer"
 require_relative "human"
 # can play a game of hang man
