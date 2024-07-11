@@ -27,6 +27,10 @@ class Human
   def letter?(letter)
     letter.match?(/[[:alpha:]]/)
   end
+
+  def add_guess_to_used
+    used_guesses.push(guess)
+  end
 end
 p1 = Human.new
 p1.enter_guess
