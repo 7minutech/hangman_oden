@@ -101,5 +101,7 @@ class HangmanGame
     set_hidden_word
     set_baord
     play_round while game_over == false
+    reset?
+    reset if play_again == true
   end
 end
