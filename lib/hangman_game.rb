@@ -40,4 +40,14 @@ class HangmanGame
   def fill_strikes
     strikes.push("x")
   end
+
+  def play_round
+    display_baord
+    player_guess
+    if correct_guess?
+      fill_correct_guess
+    else
+      fill_strikes
+    end
+  end
 end
