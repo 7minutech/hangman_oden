@@ -6,6 +6,7 @@ class Computer
   def initialize
     @guess
     @words
+    set_words
   end
 
   def set_words
