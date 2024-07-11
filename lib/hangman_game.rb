@@ -61,16 +61,16 @@ class HangmanGame
 
   def game_over?
     if strikes.length == 5
-      true
-    else
-      board == computer.guess
+      self.game_over = true
+    elsif board == computer.guess
+      self.game_over = true
     end
   end
 
   def play_game
     set_hidden_word
     set_baord
-    play_round unless game_over == true
+    play_round while game_over == false
   end
 end
 game1 = HangmanGame.new
