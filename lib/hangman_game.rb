@@ -7,7 +7,6 @@ class HangmanGame
   def initialize
     @player = Human.new
     @computer = Computer.new
-    set_hidden_word
     @board
   end
 
