@@ -3,7 +3,7 @@ require_relative "computer"
 require_relative "human"
 # can play a game of hang man
 class HangmanGame
-  attr_accessor :player, :computer, :board, :strikes, :game_over
+  attr_accessor :player, :computer, :board, :strikes, :game_over, :play_again
 
   def initialize
     @player = Human.new
@@ -11,6 +11,7 @@ class HangmanGame
     @board
     @strikes = []
     @game_over = false
+    @play_again = false
   end
 
   def set_hidden_word
