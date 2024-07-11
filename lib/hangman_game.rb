@@ -18,6 +18,10 @@ class HangmanGame
     player.valid_guess
   end
 
+  def set_baord
+    self.board = Array.new(computer.guess, " ")
+  end
+
   def display_baord
     p board
   end
