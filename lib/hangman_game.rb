@@ -84,6 +84,13 @@ class HangmanGame
     end
   end
 
+  def reset?
+    puts "Do you want to play again?"
+    puts "Enter (y/n)"
+    input = gets.chomp.downcase
+    self.play_again = true if input == "y"
+  end
+
   def play_game
     set_hidden_word
     set_baord
