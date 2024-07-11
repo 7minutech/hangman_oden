@@ -51,4 +51,13 @@ class HangmanGame
       fill_strikes
     end
   end
+
+  def game_over?
+    if strikes.length == 5
+      true
+    elsif board == computer.guess 
+      true
+    else
+      false
+  end
 end
