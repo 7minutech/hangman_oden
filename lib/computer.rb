@@ -1,3 +1,4 @@
+require "google-10000-english-no-swears.txt"
 # computer player
 # will pick random word
 class Computer
