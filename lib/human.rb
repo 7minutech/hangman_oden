@@ -12,6 +12,7 @@ class Human
     puts "Enter your guess: "
     self.guess = gets.chomp.downcase
     enter_guess until validate_guess
+    add_guess_to_used
   end
 
   def validate_guess
