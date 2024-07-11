@@ -5,6 +5,7 @@ class Human
 
   def initialize
     @guess
+    @used_guesses = []
   end
 
   def enter_guess
