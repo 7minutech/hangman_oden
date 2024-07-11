@@ -17,7 +17,7 @@ class Computer
   end
 
   def pick_guess
-    self.guess = words.sample
+    self.guess = words.sample.split
   end
 
   def display_guess
