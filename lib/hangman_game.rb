@@ -29,6 +29,10 @@ class HangmanGame
     p board
   end
 
+  def display_strikes
+    p strikes
+  end
+
   def correct_guess?
     true if computer.guess.include?(player.guess)
   end
