@@ -1,3 +1,4 @@
+require "pry-byebug"
 # computer player
 # will pick random word
 class Computer
@@ -16,6 +17,7 @@ class Computer
   end
 
   def pick_guess
+    binding.pry
     self.guess = words.sample
   end
 
