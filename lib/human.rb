@@ -41,4 +41,8 @@ class Human
   def display_guesses
     puts "past gueeses: #{used_guesses}"
   end
+
+  def reset
+    self.used_guesses = []
+  end
 end
