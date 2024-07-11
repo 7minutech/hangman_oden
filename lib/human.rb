@@ -10,13 +10,13 @@ class Human
 
   def enter_guess
     puts "Enter your guess: "
-    self.guess = gets.chomp.downcase
+    self.guess = gets.chomp.downcase[0]
     enter_guess until validate_guess
     add_guess_to_used
+    p used_guesses
   end
 
   def validate_guess
-    self.guess = guess[0]
     if !guess.nil? && letter?(guess) && !used_guesses.include?(guess)
       true
     else
@@ -35,5 +35,8 @@ class Human
 end
 p1 = Human.new
 p1.enter_guess
+p1.enter_guess
+p1.enter_guess
+
 binding.pry
 puts "fd"
