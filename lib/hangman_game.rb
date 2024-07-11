@@ -33,6 +33,10 @@ class HangmanGame
     p strikes
   end
 
+  def display_past_guesses
+    player.display_guesses
+  end
+
   def correct_guess?
     true if computer.guess.include?(player.guess)
   end
@@ -49,6 +53,7 @@ class HangmanGame
 
   def play_round
     game_over?
+    p computer.guess
     display_baord
     display_strikes
     player_guess
