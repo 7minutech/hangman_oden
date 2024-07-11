@@ -16,7 +16,7 @@ class Human
 
   def validate_guess
     self.guess = guess[0]
-    if !guess.nil? && letter?(guess)
+    if !guess.nil? && letter?(guess) && !used_guesses.include?(guess)
       true
     else
       puts "Invalid guess, please enter a valid guess"
