@@ -55,9 +55,8 @@ class HangmanGame
   def game_over?
     if strikes.length == 5
       true
-    elsif board == computer.guess 
-      true
     else
-      false
+      board == computer.guess
+    end
   end
 end
