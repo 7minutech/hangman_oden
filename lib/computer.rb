@@ -24,6 +24,3 @@ class Computer
     p guess
   end
 end
-npc = Computer.new
-npc.pick_guess
-npc.display_guess
