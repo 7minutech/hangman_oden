@@ -56,6 +56,7 @@ class HangmanGame
     p computer.guess
     display_baord
     display_strikes
+    display_past_guesses
     player_guess
     if correct_guess?
       fill_correct_guess
