@@ -26,7 +26,7 @@ class HangmanGame
     p board
   end
 
-  def check_correct_guess
+  def correct_guess?
     true if computer.guess.include?(player.guess)
   end
 end
