@@ -6,5 +6,6 @@ class Computer
 
   def initialize
     @guess
+    @words
   end
 end
