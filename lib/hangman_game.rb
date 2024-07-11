@@ -3,6 +3,7 @@ require_relative "computer"
 require_relative "human"
 # can play a game of hang man
 class HangmanGame
+  include BasicSerializable
   attr_accessor :player, :computer, :board, :strikes, :game_over, :play_again
 
   def initialize
