@@ -1,5 +1,5 @@
-require "lib/computer"
-require "lib/human"
+require_relative "computer"
+require_relative "human"
 # can play a game of hang man
 class HangmanGame
   attr_accessor :player, :computer, :board, :strikes, :game_over
@@ -21,7 +21,7 @@ class HangmanGame
   end
 
   def set_baord
-    self.board = Array.new(computer.guess, " ")
+    self.board = Array.new(computer.guess.length, " ")
   end
 
   def display_baord
@@ -60,4 +60,12 @@ class HangmanGame
       board == computer.guess
     end
   end
+
+  def play_game
+    set_hidden_word
+    set_baord
+    play_round unless game_over == true
+  end
 end
+game1 = HangmanGame.new
+game1.play_game
