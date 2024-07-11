@@ -2,12 +2,13 @@ require "lib/computer"
 require "lib/human"
 # can play a game of hang man
 class HangmanGame
-  attr_accessor :player, :computer, :board
+  attr_accessor :player, :computer, :board, :strikes
 
   def initialize
     @player = Human.new
     @computer = Computer.new
     @board
+    @strikes = Array.new(5, " ")
   end
 
   def set_hidden_word
