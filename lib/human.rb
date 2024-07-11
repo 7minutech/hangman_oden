@@ -39,6 +39,6 @@ class Human
   end
 
   def display_guesses
-    p used_guesses
+    p "past gueeses: #{used_guesses}"
   end
 end
