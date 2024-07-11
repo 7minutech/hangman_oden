@@ -17,4 +17,8 @@ class HangmanGame
   def player_guess
     player.valid_guess
   end
+
+  def display_baord
+    p board
+  end
 end
