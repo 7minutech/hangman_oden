@@ -26,7 +26,7 @@ class HangmanGame
   end
 
   def display_baord
-    p board
+    puts "Word: #{board}"
   end
 
   def display_strikes
