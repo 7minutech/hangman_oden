@@ -29,4 +29,10 @@ class HangmanGame
   def correct_guess?
     true if computer.guess.include?(player.guess)
   end
+
+  def fill_correct_guess
+    computer.guess.each_with_index do |guess, index|
+      board[index] = guess if guess == player.guess
+    end
+  end
 end
