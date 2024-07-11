@@ -9,4 +9,8 @@ class HangmanGame
     @computer = Computer.new
     @board
   end
+
+  def set_hidden_word
+    computer.pick_guess
+  end
 end
