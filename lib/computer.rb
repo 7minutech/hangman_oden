@@ -18,7 +18,12 @@ class Computer
   def pick_guess
     self.guess = words.sample
   end
+
+  def display_guess
+    p guess
+  end
 end
 npc = Computer.new
 npc.set_words
-p npc.guess
+npc.pick_guess
+npc.display_guess
