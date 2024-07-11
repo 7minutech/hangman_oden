@@ -7,15 +7,20 @@ class Human
     @guess
   end
 
-  def guess
+  def enter_guess
     puts "Enter your guess: "
     self.guess = gets.chomp.downcase
-    guess unless validate_guess
+    enter_guess until validate_guess
   end
 
   def validate_guess
-    guess = guess[0]
-    true if letter?(guess)
+    self.guess = guess[0]
+    if !guess.nil? && letter?(guess)
+      true
+    else
+      puts "Invalid guess, please enter a valid guess"
+      false
+    end
   end
 
   def letter?(letter)
@@ -23,6 +28,6 @@ class Human
   end
 end
 p1 = Human.new
-p1.guess
+p1.enter_guess
 binding.pry
-p1.guess
+puts "fd"
