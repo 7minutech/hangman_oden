@@ -13,4 +13,8 @@ class HangmanGame
   def set_hidden_word
     computer.pick_guess
   end
+
+  def get_player_guess
+    player.valid_guess
+  end
 end
