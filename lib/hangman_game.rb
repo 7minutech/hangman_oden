@@ -14,7 +14,7 @@ class HangmanGame
     computer.pick_guess
   end
 
-  def get_player_guess
+  def player_guess
     player.valid_guess
   end
 end
