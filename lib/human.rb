@@ -37,10 +37,8 @@ class Human
     end
     add_guess_to_used
   end
-end
-p1 = Human.new
-p1.valid_guess
-p1.valid_guess
-p1.valid_guess
 
-puts "fd"
+  def display_guesses
+    p used_guesses
+  end
+end
