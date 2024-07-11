@@ -8,7 +8,7 @@ class HangmanGame
     @player = Human.new
     @computer = Computer.new
     @board
-    @strikes = Array.new(5, " ")
+    @strikes = []
   end
 
   def set_hidden_word
@@ -35,5 +35,9 @@ class HangmanGame
     computer.guess.each_with_index do |guess, index|
       board[index] = guess if guess == player.guess
     end
+  end
+
+  def fill_strikes
+    strikes.push("x")
   end
 end
