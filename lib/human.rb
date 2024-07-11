@@ -7,5 +7,6 @@ class Human
   end
 
   def guess
+    self.guess = gets.chomp.downcase
   end
 end
