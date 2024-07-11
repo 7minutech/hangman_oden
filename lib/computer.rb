@@ -23,4 +23,8 @@ class Computer
   def display_guess
     p guess
   end
+
+  def reset
+    pick_guess
+  end
 end
