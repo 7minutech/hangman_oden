@@ -12,12 +12,11 @@ class Computer
 
   def set_words
     words_file = File.read "google-10000-english-no-swears.txt"
-    words = words_file.split
+    self.words = words_file.split
     words.filter! { |word| word.length.between?(5, 12) }
   end
 
   def pick_guess
-    binding.pry
     self.guess = words.sample
   end
 
@@ -26,6 +25,5 @@ class Computer
   end
 end
 npc = Computer.new
-npc.set_words
 npc.pick_guess
 npc.display_guess
