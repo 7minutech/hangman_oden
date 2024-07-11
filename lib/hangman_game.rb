@@ -58,7 +58,6 @@ class HangmanGame
   end
 
   def play_round
-    game_over?
     p computer.guess
     display_boards
     player_guess
@@ -67,12 +66,16 @@ class HangmanGame
     else
       fill_strikes
     end
+    game_over?
   end
 
   def game_over?
     if strikes.length == 5
+      display_boards
       self.game_over = true
     elsif board == computer.guess
+      fill_correct_guess
+      display_boards
       self.game_over = true
     end
   end
