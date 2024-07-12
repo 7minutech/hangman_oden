@@ -5,7 +5,7 @@ class Computer
   attr_accessor :guess, :words
 
   def initialize(guess = "")
-    @guess
+    @guess = guess
     @words
     set_words
   end
@@ -17,7 +17,7 @@ class Computer
   end
 
   def pick_guess
-    return if (self.guess = "")
+    return unless guess == ""
 
     self.guess = words.sample.chars
   end
