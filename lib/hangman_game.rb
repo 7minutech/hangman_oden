@@ -150,5 +150,3 @@ class HangmanGame
       end
   end
 end
-g1 = HangmanGame.new
-g1.play_game
