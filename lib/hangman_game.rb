@@ -1,9 +1,9 @@
 require "pry-byebug"
 require_relative "computer"
 require_relative "human"
+require "json"
 # can play a game of hang man
 class HangmanGame
-  include BasicSerializable
   attr_accessor :player, :computer, :board, :strikes, :game_over, :play_again
 
   def initialize(player: Human.new, computer: Computer.new, board: [],
@@ -121,5 +121,9 @@ class HangmanGame
         play_again: @play_again
       }
     )
+    game_save_file = File.open("game_save.json", "w")
+    game_save_file.puts game_contents
   end
 end
+g1 = HangmanGame.new
+g1.to_json
