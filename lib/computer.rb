@@ -22,11 +22,15 @@ class Computer
     self.guess = words.sample.chars
   end
 
+  def reset_guess
+    self.guess = words.sample.chars
+  end
+
   def display_guess
     p guess
   end
 
   def reset
-    pick_guess
+    reset_guess
   end
 end
