@@ -124,7 +124,8 @@ class HangmanGame
         board: @board,
         strikes: @strikes,
         game_over: @game_over,
-        play_again: @play_again
+        play_again: @play_again,
+        loaded: @loaded
       }
     )
     game_save_file = File.open("game_save.json", "w")
