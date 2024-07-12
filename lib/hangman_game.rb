@@ -141,6 +141,14 @@ class HangmanGame
     to_json
     puts "Saving game..."
   end
+
+  def laod_game
+    if File.exist?("game_save.json")
+      puts "Do you want to load your last game?"
+      if gets.chomp.downcase == "y" 
+        HangmanGame.from_json.play_game
+      end
+  end
 end
 g1 = HangmanGame.new
 g1.play_game
