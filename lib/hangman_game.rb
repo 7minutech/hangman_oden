@@ -109,4 +109,17 @@ class HangmanGame
     reset?
     reset if play_again == true
   end
+
+  def to_json(*_args)
+    game_contents = JSON.dump(
+      {
+        player: @player.used_guesses,
+        computer: @computer.guess,
+        board: @board,
+        strikes: @strikes,
+        game_over: @game_over,
+        play_again: @play_again
+      }
+    )
+  end
 end
