@@ -115,6 +115,7 @@ class HangmanGame
     play_round while game_over == false
     reset?
     reset if play_again == true
+    exit
   end
 
   def to_json(*_args)
