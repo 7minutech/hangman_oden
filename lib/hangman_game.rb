@@ -6,13 +6,14 @@ class HangmanGame
   include BasicSerializable
   attr_accessor :player, :computer, :board, :strikes, :game_over, :play_again
 
-  def initialize
-    @player = Human.new
-    @computer = Computer.new
-    @board
-    @strikes = []
-    @game_over = false
-    @play_again = false
+  def initialize(player: Human.new, computer: Computer.new, board: [],
+                 strikes: [], game_over: false, play_again: false)
+    @player = player
+    @computer = computer
+    @board = board
+    @strikes = strikes
+    @game_over = game_over
+    @play_again = play_again
   end
 
   def set_hidden_word
