@@ -107,6 +107,7 @@ class HangmanGame
   end
 
   def play_game
+    laod_game
     puts "To save the game enter \"save\""
     set_hidden_word
     set_baord
