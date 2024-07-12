@@ -143,10 +143,11 @@ class HangmanGame
   end
 
   def laod_game
-    if File.exist?("game_save.json")
-      puts "Do you want to load your last game?"
-      if gets.chomp.downcase == "y" 
-        HangmanGame.from_json.play_game
-      end
+    return unless File.exist?("game_save.json")
+
+    puts "Do you want to load your last game?"
+    return unless gets.chomp.downcase == "y"
+
+    HangmanGame.from_json.play_game
   end
 end
