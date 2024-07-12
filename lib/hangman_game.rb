@@ -48,7 +48,7 @@ class HangmanGame
   end
 
   def correct_guess?
-    true if computer.guess.include?(player.guess)
+    true if computer.guess.include?(player.guess) || player_guess == "save"
   end
 
   def fill_correct_guess
