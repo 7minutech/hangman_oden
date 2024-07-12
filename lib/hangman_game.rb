@@ -153,5 +153,6 @@ class HangmanGame
 
     saved_game = HangmanGame.from_json
     saved_game.play_game
+    puts "Loading game"
   end
 end
