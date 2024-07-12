@@ -4,7 +4,7 @@ require "pry-byebug"
 class Computer
   attr_accessor :guess, :words
 
-  def initialize(guess: "")
+  def initialize(guess = "")
     @guess
     @words
     set_words

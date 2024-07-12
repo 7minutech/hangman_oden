@@ -3,7 +3,7 @@ require "pry-byebug"
 class Human
   attr_accessor :guess, :used_guesses
 
-  def initialize(used_guesses: [])
+  def initialize(used_guesses = [])
     @guess
     @used_guesses = []
   end
