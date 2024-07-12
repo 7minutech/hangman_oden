@@ -131,6 +131,11 @@ class HangmanGame
     new(Human.new(game_data["player"]), Computer.new(game_data["computer"]), game_data[board],
         game_data["strikes"], game_data["game_over"], game_data["play_agin"])
   end
+
+  def save_game
+    to_json
+    puts "Saving game..."
+  end
 end
 g1 = HangmanGame.new
 g1.to_json
