@@ -10,7 +10,8 @@ class Human
 
   def enter_guess
     puts "Enter your guess: "
-    self.guess = gets.chomp.downcase[0]
+    self.guess = gets.chomp
+    self.guess = guess[0] unless guess == "save"
   end
 
   def validate_guess
