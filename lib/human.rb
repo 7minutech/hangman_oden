@@ -14,7 +14,7 @@ class Human
   end
 
   def validate_guess
-    if (!guess.nil? && letter?(guess) && !used_guesses.include?(guess)) || guess == "save"
+    if !guess.nil? && letter?(guess) && !used_guesses.include?(guess)
       true
     else
       puts "Invalid guess, please enter a valid guess"
