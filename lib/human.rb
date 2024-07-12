@@ -28,7 +28,7 @@ class Human
   end
 
   def add_guess_to_used
-    used_guesses.push(guess)
+    used_guesses.push(guess) unless guess == "save"
   end
 
   def valid_guess
