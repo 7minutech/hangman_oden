@@ -4,10 +4,10 @@ require_relative "human"
 require "json"
 # can play a game of hang man
 class HangmanGame
-  attr_accessor :player, :computer, :board, :strikes, :game_over, :play_again
+  attr_accessor :player, :computer, :board, :strikes, :game_over, :play_again, :loaded
 
   def initialize(player = Human.new, computer = Computer.new, board = [],
-                 strikes = [], game_over = false, play_again = false)
+                 strikes = [], game_over = false, play_again = false, loaded = false)
     @player = player
     @computer = computer
     @board = board
@@ -144,11 +144,12 @@ class HangmanGame
   end
 
   def laod_game
-    if File.exist?("game_save.json")
-      puts "Do you want to load your last game?"
-      if gets.chomp.downcase == "y"
-        saved_game = HangmanGame.from_json
-        saved_game.play_game
-      end
+    return unless File.exist?("game_save.json") && loaded == false
+
+    puts "Do you want to load your last game?"
+    return unless gets.chomp.downcase == "y"
+
+    saved_game = HangmanGame.from_json
+    saved_game.play_game
   end
 end
