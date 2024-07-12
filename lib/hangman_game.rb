@@ -149,6 +149,7 @@ class HangmanGame
     puts "Do you want to load your last game?"
     return unless gets.chomp.downcase == "y"
 
-    HangmanGame.from_json.play_game
+    saved_game = HangmanGame.from_json
+    saved_game.play_game
   end
 end
