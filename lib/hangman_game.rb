@@ -66,7 +66,11 @@ class HangmanGame
     display_boards
     player_guess
     if correct_guess?
-      fill_correct_guess
+      if player.guess == "save"
+        save_game
+      else
+        fill_correct_guess
+      end
     else
       fill_strikes
     end
