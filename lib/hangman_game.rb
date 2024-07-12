@@ -124,6 +124,13 @@ class HangmanGame
     game_save_file = File.open("game_save.json", "w")
     game_save_file.puts game_contents
   end
+
+  def self.from_json
+    game_file_data = File.read("game_save.json")
+    game_data = JSON.parse game_file_data
+    new(Human.new(game_data["player"]), Computer.new(game_data["computer"]), game_data[board],
+        game_data["strikes"], game_data["game_over"], game_data["play_agin"])
+  end
 end
 g1 = HangmanGame.new
 g1.to_json
