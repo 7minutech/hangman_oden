@@ -107,6 +107,7 @@ class HangmanGame
   end
 
   def play_game
+    puts "To save the game enter \"save\""
     set_hidden_word
     set_baord
     play_round while game_over == false
