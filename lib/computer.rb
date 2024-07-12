@@ -17,7 +17,7 @@ class Computer
   end
 
   def pick_guess
-    return unless guess == ""
+    return if (self.guess = "")
 
     self.guess = words.sample.chars
   end
