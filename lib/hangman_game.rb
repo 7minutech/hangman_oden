@@ -48,7 +48,7 @@ class HangmanGame
   end
 
   def correct_guess?
-    true if computer.guess.include?(player.guess) || player_guess == "save"
+    true if computer.guess.include?(player.guess) || player.guess == "save"
   end
 
   def fill_correct_guess
@@ -143,4 +143,4 @@ class HangmanGame
   end
 end
 g1 = HangmanGame.new
-g1.to_json
+g1.play_game
