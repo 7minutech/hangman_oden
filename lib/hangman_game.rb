@@ -26,7 +26,7 @@ class HangmanGame
   end
 
   def set_baord
-    self.board = Array.new(computer.guess.length, " ") if board.empty?
+    self.board = Array.new(computer.guess.length, " ") if board.empty? || player.used_guesses.empty?
   end
 
   def display_baord
