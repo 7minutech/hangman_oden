@@ -5,7 +5,7 @@ class Human
 
   def initialize(used_guesses = [])
     @guess
-    @used_guesses = []
+    @used_guesses = used_guesses
   end
 
   def enter_guess
