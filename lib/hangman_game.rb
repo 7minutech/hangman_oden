@@ -63,7 +63,7 @@ class HangmanGame
   end
 
   def play_round
-    # p computer.guess
+    p computer.guess
     display_boards
     player_guess
     if correct_guess?
