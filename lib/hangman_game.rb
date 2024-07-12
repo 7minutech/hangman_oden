@@ -151,8 +151,8 @@ class HangmanGame
     puts "Do you want to load your last game?"
     return unless gets.chomp.downcase == "y"
 
+    puts "Loading game..."
     saved_game = HangmanGame.from_json
     saved_game.play_game
-    puts "Loading game"
   end
 end
