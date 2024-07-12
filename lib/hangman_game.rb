@@ -149,6 +149,7 @@ class HangmanGame
     return unless File.exist?("game_save.json") && loaded == false
 
     puts "Do you want to load your last game?"
+    puts "Enter (y/n)"
     return unless gets.chomp.downcase == "y"
 
     puts "Loading game..."
